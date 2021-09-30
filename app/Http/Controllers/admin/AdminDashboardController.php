@@ -7,11 +7,20 @@ use Illuminate\Http\Request;
 
 class AdminDashboardController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth:admin');
+    
+    public function prasad(){
+        return view('admin/ManagePrasadView');
     }
-    public function index(){
-        return view('admin/DashboardView');
+
+    public function eventType(){
+        return view('admin/ManageEventTypeView');
+    }
+
+    public function event(){
+        return view('admin/ManageEventView');
+    }
+
+    public function addUser(){
+        return view('admin/AddUserView');
     }
 }
