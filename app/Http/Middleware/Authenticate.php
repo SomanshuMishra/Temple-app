@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use Illuminate\Auth\Middleware\Authenticate as Middleware;
-
+use Illuminate\Support\Arr;
 class Authenticate extends Middleware
 {
     /**
@@ -14,8 +14,15 @@ class Authenticate extends Middleware
      */
     protected function redirectTo($request)
     {
+        
         if (! $request->expectsJson()) {
-            return route('login');
+            
+            return route('homepage');
         }
+        if (Arr::first($this->guards) === 'admin') {
+            return route('admin.login');
+        }
+
+        return route('login');
     }
 }

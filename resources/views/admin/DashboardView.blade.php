@@ -17,14 +17,25 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- End layout styles -->
     <link rel="shortcut icon" href="assets/images/favicon.ico" />
+    <style>
+      #logo{
+        width: 80px;
+        height: 100%;
+      }
+      #mini-logo{
+        width:60px;
+        height:100%;
+
+      }
+    </style>
   </head>
   <body>
     <div class="container-scroller">
       <!-- partial:partials/_navbar.html -->
       <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-          <a class="navbar-brand brand-logo" href="index.html"><img src="assets/images/logo.svg" alt="logo" /></a>
-          <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+          <a class="navbar-brand brand-logo" href="index.html"><img id="logo" src="assets/images/Logo_Khidkaleshwar.png" alt="logo"/></a>
+          <a class="navbar-brand brand-logo-mini" href="index.html"><img id="mini-logo" src="assets/images/Logo_Khidkaleshwar.png" alt="logo" width="100px" /></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-stretch">
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
