@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>@yield('title')</title>
     <!-- plugins:css -->
     <link rel="stylesheet" href="assets/vendors/mdi/css/materialdesignicons.min.css">
+    
     <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
     <!-- endinject -->
     <!-- Plugin css for this page -->
@@ -15,10 +17,12 @@
     <!-- endinject -->
     <!-- Layout styles -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css"/>    
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
     
     <link rel="shortcut icon" href="assets/images/favicon.ico" />
     <style>
+      @yield('style')
+
       #logo{
         width: 80px;
         height: 100%;
@@ -28,8 +32,10 @@
         height:100%;
 
       }
-    </style>
+      /* <style> @yield('style')</style> */
+      </style>
   </head>
+  
   <body>
     <div class="container-scroller">
       <!-- partial:partials/_navbar.html -->
@@ -88,16 +94,10 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#users-collapse" aria-expanded="false" aria-controls="users-collapse">
+              <a class="nav-link"  href="{{route('admin.manageUser')}}" aria-expanded="false" >
                 <span class="menu-title">Users</span>
                 <i class="mdi mdi-account menu-icon"></i>
               </a>
-              <div class="collapse" id="users-collapse">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="#">Add Users</i></a></li>
-                  <li class="nav-item"> <a class="nav-link" href="#">Manage Users</i></a></li>
-                </ul>
-              </div>
             </li>
 
             <li class="nav-item">
@@ -150,10 +150,10 @@
     <script src="assets/js/dashboard.js"></script>
     <script src="assets/js/todolist.js"></script>
     <!-- Datatable -->
+    
     <script>
       @yield('script')
     </script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
   </body>
 
 </html>

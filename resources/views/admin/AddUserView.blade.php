@@ -19,11 +19,11 @@
 
 {{-- FORM START --}}
 
-<form class="row  needs-validation" >
+<form class="row  needs-validation" method="POST" action="{{route('admin.addUser')}}" >
   @csrf
   <div class="col-md-4">
     <label for="name" class="form-label">User Name</label>
-    <input type="text" class="form-control" id="name" name="name" required>
+    <input type="text" class="form-control" id="name" name="users_name" required>
     <div class="valid-feedback">
       Looks good!
                 </div>
@@ -44,12 +44,10 @@
                 {{-- <label for="password" class="form-label"> )</label> --}}
                 <input type="password" class="form-control" id="password" name="password" required>
               </div>
-                        
-
     
               <div class="form-group col md-2 my-4">
                 <label for="exampleFormControlSelect1">Add Role :</label>
-                <select class="form-control " id="exampleFormControlSelect1">
+                <select class="form-control " name="role_id" id="exampleFormControlSelect1">
                   <option value="1">Priest</option>
                   <option value="2">Bhakt</option>
                   <option value="3">Guru</option>
@@ -59,12 +57,9 @@
               </div>
               <div class="form-group col md-2 my-4">
                 <label for="exampleFormControlSelect1">Status</label>
-                <select class="form-control " id="exampleFormControlSelect1">
-                  <option value="1">Priest</option>
-                  <option value="2">Bhakt</option>
-                  <option value="3">Guru</option>
-                  <option value="4">Pujari</option>
-                  <option value="5">Entrepeneur</option>
+                <select class="form-control " name="status" id="exampleFormControlSelect1">
+                  <option value="1">Active</option>
+                  <option value="0">Inactive</option>
                 </select>
               </div>         
               <div class="col-12 my-2">

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Admin;
 use Illuminate\Http\Request;
 
 class AdminDashboardController extends Controller
@@ -20,7 +21,5 @@ class AdminDashboardController extends Controller
         return view('admin/ManageEventView');
     }
 
-    public function addUser(){
-        return view('admin/AddUserView');
-    }
+    
 }
